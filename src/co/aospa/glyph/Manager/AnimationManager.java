@@ -53,6 +53,7 @@ public final class AnimationManager {
 
         if (StatusManager.isAnimationActive()) {
             if (wait) {
+		if (name == "charging") return false; // Daniel moment tm
                 if (DEBUG) Log.d(TAG, "There is already an animation playing, wait | name: " + name);
                 long start = System.currentTimeMillis();
                 while (StatusManager.isAnimationActive()){
