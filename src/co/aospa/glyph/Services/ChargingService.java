@@ -76,6 +76,7 @@ public class ChargingService extends Service {
 
 	    super.onDestroy();
 	    this.unregisterReceiver(mPowerMonitor);
+	    this.unregisterReceiver(mScreenStateReceiver);
     }
 
     @Override
